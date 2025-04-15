@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "expectation_config": {
+    "type": "expect_column_values_to_not_be_null",
+    "kwargs": {
+      "batch_id": "spark_datasource-employee_asset",
+      "column": "emp_id"
+    },
+    "meta": {}
+  },
+  "result": {
+    "element_count": 10,
+    "unexpected_count": 0,
+    "unexpected_percent": 0.0,
+    "partial_unexpected_list": [],
+    "partial_unexpected_counts": []
+  },
+  "meta": {},
+  "exception_info": {
+    "raised_exception": false,
+    "exception_traceback": null,
+    "exception_message": null
+  }
+}

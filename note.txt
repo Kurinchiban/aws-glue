@@ -1,0 +1,46 @@
+Region: 
+us - ohio
+
+s3://glue-demo-bucket-150425/output/unique_employees/
+
+
+Data:
+aws s3 cp /home/kurinchiban/Desktop/glue-job/employee.csv s3://glue-demo-bucket-150425/input/employees.csv
+
+job:
+aws s3 cp /home/kurinchiban/Desktop/glue-job/unique_employees_glue_job.py s3://glue-demo-bucket-150425/script/unique_employees_glue_job.py
+
+requirements:
+aws s3 cp /home/kurinchiban/Desktop/glue-job/python_dependencies.zip s3://glue-demo-bucket-150425/requirements/python_dependencies.zip
+
+
+job_v1:
+aws s3 cp /home/kurinchiban/Desktop/glue-job/unique_employees_glue_job_v1.py s3://glue-demo-bucket-150425/script/unique_employees_glue_job_v1.py
+
+
+Bucket name: glue-demo-bucket-150425
+Job name: unique_employees_glue_job
+Job name: unique_employees_glue_job_v1
+
+Assume role: https://chatgpt.com/c/67fe10ae-455c-8012-9c23-70faa9002c44 
+
+
+ZIP External files:
+
+pip install -r requirements.txt --target ./python 
+cd python
+zip -r ../python_dependencies.zip .
+aws s3 cp /home/kurinchiban/Desktop/glue-job/python_dependencies.zip s3://glue-demo-bucket-150425/requirements/python_dependencies.zip
+
+mkdir python
+pip install -r requirements.txt -t python/
+zip -r python_libs.zip python/
+aws s3 cp /home/kurinchiban/Desktop/glue-job/python_libs.zip s3://glue-demo-bucket-150425/requirements/python_libs.zip
+
+
+- ARN
+- pass policy
+- Sematic layer
+
+
+aws s3 cp /home/kurinchiban/Music/gx-package.zip s3://glue-demo-bucket-150425/requirements/gx-package.zip

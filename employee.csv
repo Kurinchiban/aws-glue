@@ -1,0 +1,11 @@
+emp_id,first_name,last_name,email,department
+101,John,Doe,john.doe@example.com,Engineering
+102,Jane,Smith,jane.smith@example.com,HR
+103,Bob,Brown,bob.brown@example.com,Sales
+104,John,Doe,john.duplicate@example.com,Engineering
+105,Alice,Johnson,alice.johnson@example.com,Marketing
+106,Jane,Smith,jane.duplicate@example.com,HR
+107,Chris,Evans,chris.evans@example.com,Engineering
+108,Mike,Davis,mike.davis@example.com,Support
+109,Nina,Patel,nina.patel@example.com,Finance
+110,Alice,Johnson,alice.duplicate@example.com,Marketing

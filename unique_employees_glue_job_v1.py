@@ -66,13 +66,14 @@ job.commit()
 #   --role Reveal-Glue-S3 \
 #   --command '{"Name":"glueetl","ScriptLocation":"s3://glue-demo-bucket-150425/script/unique_employees_glue_job_v1.py","PythonVersion":"3"}' \
 #   --default-arguments '{
-#     "--TempDir":"s3://aws-glue-assets-954147952259-us-east-2/",
-#     "--job-language":"python",
-#     "--extra-py-files":"s3://glue-demo-bucket-150425/requirements/python_libs.zip"
+#     "--TempDir": "s3://aws-glue-assets-954147952259-us-east-2/",
+#     "--job-language": "python",
+#     "--additional-python-modules": "s3://glue-demo-bucket-150425/requirements/requirements.txt",
+#     "--python-modules-installer-option": "-r"
 #   }' \
 #   --glue-version "5.0" \
 #   --region us-east-2
-  
+
 # aws glue start-job-run \
 #   --job-name my-glue-job-v1 \
 #   --arguments '{"--TempDir":"s3://aws-glue-assets-954147952259-us-east-2/","--job-bookmark-option":"job-bookmark-disable"}' \
